@@ -111,27 +111,118 @@
     var year = document.getElementById('year');
     if (year) year.textContent = String(new Date().getFullYear());
 
-    // Contact card: copy email
-    var copyBtn = document.querySelector('.contact-copy-btn');
-    var copyStatus = document.querySelector('.contact-copy-status');
-    function setCopyStatus(msg) {
-      if (copyStatus) copyStatus.textContent = msg;
+    // Contact: click email to copy + toast popup
+    var toastEl = document.getElementById('toast');
+    var toastTimer = null;
+    function showToast(msg) {
+      if (!toastEl) return;
+      toastEl.textContent = msg;
+      toastEl.classList.add('is-visible');
+      if (toastTimer) window.clearTimeout(toastTimer);
+      toastTimer = window.setTimeout(function () {
+        toastEl.classList.remove('is-visible');
+      }, 2200);
     }
-    if (copyBtn) {
-      copyBtn.addEventListener('click', function () {
-        var value = copyBtn.getAttribute('data-copy') || '';
-        if (!value) return;
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(value).then(function () {
-            setCopyStatus('Copied email to clipboard.');
-          }).catch(function () {
-            setCopyStatus('Could not copy automatically. Please copy manually: ' + value);
-          });
-        } else {
-          setCopyStatus('Copy not supported in this browser. Email: ' + value);
+
+    function copyToClipboard(value) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        return navigator.clipboard.writeText(value);
+      }
+      // Fallback for older browsers
+      return new Promise(function (resolve, reject) {
+        try {
+          var ta = document.createElement('textarea');
+          ta.value = value;
+          ta.setAttribute('readonly', '');
+          ta.style.position = 'fixed';
+          ta.style.left = '-9999px';
+          ta.style.top = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          ta.setSelectionRange(0, ta.value.length);
+          var ok = document.execCommand && document.execCommand('copy');
+          document.body.removeChild(ta);
+          if (ok) resolve();
+          else reject(new Error('copy_failed'));
+        } catch (e) {
+          reject(e);
         }
       });
     }
+
+    var emailCopyBtn = document.querySelector('.contact-email-copy');
+    if (emailCopyBtn) {
+      emailCopyBtn.addEventListener('click', function () {
+        var value = emailCopyBtn.getAttribute('data-copy-email') || '';
+        if (!value) return;
+        copyToClipboard(value).then(function () {
+          showToast('Email copied to clipboard.');
+        }).catch(function () {
+          showToast('Could not copy email. Please copy manually.');
+        });
+      });
+    }
+
+    // Education: modal for long details
+    var eduModal = document.getElementById('edu-modal');
+    var eduModalTitle = document.getElementById('edu-modal-title');
+    var eduModalBody = document.getElementById('edu-modal-body');
+    var eduModalCloseTargets = eduModal ? eduModal.querySelectorAll('[data-modal-close]') : null;
+    var lastFocusedEl = null;
+
+    function isEduModalOpen() {
+      return !!(eduModal && eduModal.classList.contains('is-open'));
+    }
+
+    function openEduModal(title, html) {
+      if (!eduModal || !eduModalTitle || !eduModalBody) return;
+      lastFocusedEl = document.activeElement;
+      eduModalTitle.textContent = title || 'Details';
+      eduModalBody.innerHTML = html || '';
+      eduModal.classList.add('is-open');
+      eduModal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+      var closeBtn = eduModal.querySelector('.modal-close');
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function closeEduModal() {
+      if (!eduModal) return;
+      eduModal.classList.remove('is-open');
+      eduModal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+      if (eduModalBody) eduModalBody.innerHTML = '';
+      if (lastFocusedEl && lastFocusedEl.focus) lastFocusedEl.focus();
+      lastFocusedEl = null;
+    }
+
+    var eduMoreBtns = document.querySelectorAll('.edu-more-btn');
+    if (eduMoreBtns && eduMoreBtns.length) {
+      eduMoreBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var item = btn.closest ? btn.closest('.edu-item') : null;
+          if (!item) return;
+          var titleEl = item.querySelector('.edu-school');
+          var detailsEl = item.querySelector('.edu-details');
+          if (!detailsEl) return;
+          openEduModal(titleEl ? titleEl.textContent : 'Details', detailsEl.innerHTML);
+        });
+      });
+    }
+
+    if (eduModalCloseTargets && eduModalCloseTargets.length) {
+      eduModalCloseTargets.forEach(function (el) {
+        el.addEventListener('click', closeEduModal);
+      });
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if (!isEduModalOpen()) return;
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        closeEduModal();
+      }
+    });
 
     // Timeline reveal on scroll (Experience)
     var timelineCards = document.querySelectorAll('.timeline--split .timeline-main');

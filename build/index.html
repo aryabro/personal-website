@@ -3,8 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Aryaman Nasare | Portfolio</title>
+    <title>Aryaman Nasare</title>
     <meta name="description" content="Aryaman Nasare — Software Engineer specializing in automation, data systems, and AI.">
+    <link rel="icon" href="https://github.com/aryabro.png?size=32" sizes="32x32" type="image/png" />
+    <link rel="icon" href="https://github.com/aryabro.png?size=16" sizes="16x16" type="image/png" />
+    <link rel="apple-touch-icon" href="https://github.com/aryabro.png?size=180" />
+    <meta name="msapplication-TileImage" content="https://github.com/aryabro.png?size=144" />
+    <meta name="msapplication-TileColor" content="#0a0e27" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
   <body>
@@ -26,8 +31,8 @@
           <span class="brand-name">Aryaman</span>
         </a>
         <button class="theme-toggle" type="button" aria-label="Toggle light/dark theme" aria-pressed="false" title="Toggle theme">
-          <span class="theme-toggle-icon theme-toggle-icon--sun" aria-hidden="true"><i class="fas fa-cloud-sun"></i></span>
-          <span class="theme-toggle-icon theme-toggle-icon--moon" aria-hidden="true"><i class="fas fa-moon"></i></span>
+          <span class="theme-toggle-icon theme-toggle-icon--sun" aria-hidden="true"><i class="fa-solid fa-cloud-sun"></i></span>
+          <span class="theme-toggle-icon theme-toggle-icon--moon" aria-hidden="true"><i class="fa-solid fa-moon"></i></span>
         </button>
       </div>
 
@@ -45,13 +50,13 @@
 
       <div class="sidebar-social">
         <a href="https://github.com/aryabro" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
-          <i class="fab fa-github"></i>
+          <i class="fa-brands fa-github"></i>
         </a>
         <a href="https://www.linkedin.com/in/aryaman-nasare/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
-          <i class="fab fa-linkedin"></i>
+          <i class="fa-brands fa-linkedin"></i>
         </a>
         <a href="mailto:nasare2@illinois.edu" aria-label="Email" title="Email">
-          <i class="fas fa-envelope"></i>
+          <i class="fa-solid fa-envelope"></i>
         </a>
       </div>
       <div class="sidebar-footer-text">
@@ -80,14 +85,14 @@
           </p>
 
           <div class="hero-pills" aria-label="Focus areas">
-            <span class="hero-pill"><i class="fas fa-server" aria-hidden="true"></i> Backend & APIs</span>
-            <span class="hero-pill"><i class="fas fa-gears" aria-hidden="true"></i> Automation / CI</span>
-            <span class="hero-pill"><i class="fas fa-brain" aria-hidden="true"></i> AI + RAG</span>
+            <span class="hero-pill"><i class="fa-solid fa-server" aria-hidden="true"></i> Backend & APIs</span>
+            <span class="hero-pill"><i class="fa-solid fa-gears" aria-hidden="true"></i> Automation / CI</span>
+            <span class="hero-pill"><i class="fa-solid fa-brain" aria-hidden="true"></i> AI + RAG</span>
           </div>
           
           <div class="hero-badges">
             <span class="status-badge status-badge--active">
-              <i class="fas fa-circle" aria-hidden="true"></i> Open for roles across US
+              <i class="fa-solid fa-circle" aria-hidden="true"></i> Open for roles across US
             </span>
           </div>
 
@@ -98,15 +103,15 @@
 
           <div class="hero-social">
             <a class="social-link" href="mailto:nasare2@illinois.edu" aria-label="Email" title="Email">
-              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
               <span>Email</span>
             </a>
             <a class="social-link" href="https://www.linkedin.com/in/aryaman-nasare/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
-              <i class="fab fa-linkedin" aria-hidden="true"></i>
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
               <span>LinkedIn</span>
             </a>
             <a class="social-link" href="https://github.com/aryabro" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
-              <i class="fab fa-github" aria-hidden="true"></i>
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
               <span>GitHub</span>
             </a>
           </div>
@@ -145,34 +150,99 @@
             <p class="section-subtitle">Academic background and coursework highlights.</p>
           </header>
 
-          <div class="timeline timeline--grid">
-            <article class="timeline-item">
-              <div class="timeline-logo">
+          <div class="education-grid" aria-label="Education">
+            <article class="edu-item">
+              <div class="edu-logo-wrap" aria-hidden="true">
                 <img src="assets/logos/uiuc-logo.png" alt="University of Illinois Logo" class="edu-logo">
               </div>
-              <div class="timeline-top">
-                <h3 class="timeline-title">University of Illinois Urbana-Champaign</h3>
-                <span class="timeline-meta">Aug 2024 – Dec 2025 • Champaign, Illinois</span>
+              <div class="edu-body">
+                <div class="edu-header">
+                  <h3 class="edu-school">University of Illinois Urbana-Champaign</h3>
+                  <div class="edu-dates">Aug 2024 – Dec 2025</div>
+                </div>
+                <div class="edu-subheader">
+                  <div class="edu-degree">Master of Science in Computer Science</div>
+                  <div class="edu-loc">Champaign, Illinois</div>
+                </div>
+                <ul class="edu-bullets">
+                  <li><strong>Grade:</strong> 3.96 / 4.00</li>
+                  <li><strong>Highlights:</strong> CS 409 (A+), CS 568 (A+), CS 411 (A+)</li>
+                </ul>
+
+                <div class="edu-actions">
+                  <button class="btn btn--small btn--ghost edu-more-btn" type="button" aria-label="View UIUC coursework and teaching details">
+                    Read More
+                  </button>
+                </div>
+
+                <div class="edu-details" hidden>
+                  <div class="edu-sections" aria-label="UIUC courses and teaching">
+                  <div class="edu-section">
+                    <div class="edu-section-title">Courses</div>
+                    <ul class="edu-course-list">
+                      <li class="edu-course-item"><span class="edu-course-code">CS 427</span><span class="edu-course-name">Software Engineering</span></li>
+                      <li class="edu-course-item"><span class="edu-course-code">CS 409</span><span class="edu-course-name">The Art of Web Programming</span><span class="edu-course-grade">A+</span></li>
+                      <li class="edu-course-item"><span class="edu-course-code">CS 444</span><span class="edu-course-name">Deep Learning for Computer Vision</span></li>
+                      <li class="edu-course-item"><span class="edu-course-code">CS 498</span><span class="edu-course-name">Cloud Computing Applications</span></li>
+                      <li class="edu-course-item"><span class="edu-course-code">CS 568</span><span class="edu-course-name">User-Centered Machine Learning</span><span class="edu-course-grade">A+</span></li>
+                      <li class="edu-course-item"><span class="edu-course-code">CS 591</span><span class="edu-course-name">Security and Privacy</span></li>
+                      <li class="edu-course-item"><span class="edu-course-code">CS 598</span><span class="edu-course-name">Machine Learning for Software Engineering</span></li>
+                      <li class="edu-course-item"><span class="edu-course-code">CS 411</span><span class="edu-course-name">Database Systems</span><span class="edu-course-grade">A+</span></li>
+                      <li class="edu-course-item"><span class="edu-course-code">CS 511</span><span class="edu-course-name">Advanced Data Management</span></li>
+                      <li class="edu-course-item"><span class="edu-course-code">CS 591</span><span class="edu-course-name">CS Colloquium</span></li>
+                    </ul>
+                  </div>
+
+                  <div class="edu-section">
+                    <div class="edu-section-title">Teaching</div>
+                    <ul class="edu-teaching-list">
+                      <li class="edu-teaching-item"><span class="edu-teaching-role">TA</span> for <span class="edu-teaching-course">CS 598: Foundations of Data Curation</span> <span class="edu-teaching-term">(Fall 2025)</span></li>
+                      <li class="edu-teaching-item"><span class="edu-teaching-role">TA</span> for <span class="edu-teaching-course">CS 411: Database Systems</span> <span class="edu-teaching-term">(Summer 2025)</span></li>
+                      <li class="edu-teaching-item"><span class="edu-teaching-role">CA</span> for <span class="edu-teaching-course">CS 437: Internet of Things</span> <span class="edu-teaching-term">(Spring 2025)</span></li>
+                    </ul>
+                  </div>
+                  </div>
+                </div>
               </div>
-              <div class="timeline-degree">Master of Science in Computer Science</div>
-              <ul class="timeline-bullets">
-                <li><strong>GPA:</strong> 3.96 / 4.00</li>
-                <li><strong>Relevant coursework:</strong> Cloud Computing Applications, Deep Learning for Computer Vision, Software Engineering</li>
-              </ul>
             </article>
 
-            <article class="timeline-item">
-              <div class="timeline-logo">
+            <article class="edu-item">
+              <div class="edu-logo-wrap" aria-hidden="true">
                 <img src="assets/logos/pune-university-logo.png" alt="Pune University Logo" class="edu-logo">
               </div>
-              <div class="timeline-top">
-                <h3 class="timeline-title">Savitribai Phule Pune University</h3>
-                <span class="timeline-meta">Aug 2019 – May 2023 • Pune, India</span>
+              <div class="edu-body">
+                <div class="edu-header">
+                  <h3 class="edu-school">Savitribai Phule Pune University</h3>
+                  <div class="edu-dates">Aug 2019 – May 2023</div>
+                </div>
+                <div class="edu-subheader">
+                  <div class="edu-degree">Bachelor of Computer Engineering (Honors in Data Science)</div>
+                  <div class="edu-loc">Pune, India</div>
+                </div>
+                <ul class="edu-bullets">
+                  <li><strong>Grade:</strong> 8.74 / 10.00 — Honors in Data Science</li>
+                  <li><strong>Highlights:</strong> Technical Lead, Meraki Club • Research &amp; Innovation Cell</li>
+                </ul>
+
+                <div class="edu-actions">
+                  <button class="btn btn--small btn--ghost edu-more-btn" type="button" aria-label="View SPPU activities and coursework details">
+                    Read More
+                  </button>
+                </div>
+
+                <div class="edu-details" hidden>
+                  <ul class="edu-bullets">
+                    <li>
+                      <strong>Activities &amp; societies:</strong>
+                      <span class="edu-inline-list">Technical Lead of Meraki Club; Member of Research &amp; Innovation Cell, RMD Sinhgad</span>
+                    </li>
+                    <li>
+                      <strong>Relevant coursework:</strong>
+                      <span class="edu-inline-list">Object Oriented Programming, Machine Learning, Data Structures and Algorithm</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="timeline-degree">Bachelor of Computer Engineering (Honors in Data Science)</div>
-              <ul class="timeline-bullets">
-                <li><strong>GPA:</strong> 8.74 / 10.00</li>
-              </ul>
             </article>
           </div>
         </div>
@@ -195,7 +265,7 @@
                 <div class="experience-logo">
                   <img src="assets/logos/uiuc-logo.png" alt="UIUC Logo" class="company-logo">
                 </div>
-                <h3 class="timeline-role">Graduate Teaching Assistant</h3>
+                <h3 class="timeline-role">Graduate Teaching Assistant – Database Systems & Foundations of Data Curation</h3>
                 <div class="timeline-org">University of Illinois Urbana-Champaign</div>
                 <ul class="timeline-bullets">
                   <li>Developed data systems assignments covering SQL schema design and indexing, NoSQL/graph systems (MongoDB, Neo4j), and Docker-based data curation workflows for 550+ students across two graduate courses.</li>
@@ -213,11 +283,29 @@
                 <div class="experience-logo">
                   <img src="assets/logos/ria-advisory-logo.png" alt="RIA Advisory Logo" class="company-logo">
                 </div>
-                <h3 class="timeline-role">Software Engineer Intern (Technology Track)</h3>
+                <h3 class="timeline-role">Software Engineer Intern</h3>
                 <div class="timeline-org">RIA Advisory</div>
                 <ul class="timeline-bullets">
                   <li>Built 60+ end-to-end automation flows with Selenium to validate a SaaS test automation platform, using dynamic waits and strict assertions to reduce flakiness and expand regression coverage.</li>
                   <li>Engineered a LangChain RAG pipeline indexing 200+ pages of internal technical guides into a FAISS vector store, enabling 20+ interns to self-resolve environment issues and reducing troubleshooting time by 33%.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-side" aria-label="Dates and location">
+                <div class="timeline-date">Jan 2025 – May 2025</div>
+                <div class="timeline-loc">Champaign, Illinois</div>
+              </div>
+              <div class="timeline-main">
+                <div class="experience-logo">
+                  <img src="assets/logos/uiuc-logo.png" alt="UIUC Logo" class="company-logo">
+                </div>
+                <h3 class="timeline-role">Graduate Course Assistant – Internet of Things</h3>
+                <div class="timeline-org">University of Illinois Urbana-Champaign</div>
+                <ul class="timeline-bullets">
+                  <li>Supported course delivery through office hours and student Q&amp;A, helping debug assignments and clarify core concepts.</li>
+                  <li>Assisted with grading and feedback to improve student iteration speed and consistency.</li>
                 </ul>
               </div>
             </article>
@@ -231,7 +319,7 @@
                 <div class="experience-logo">
                   <img src="assets/logos/jio-logo.png" alt="Reliance Jio Logo" class="company-logo">
                 </div>
-                <h3 class="timeline-role">Software Engineer Trainee</h3>
+                <h3 class="timeline-role">Software Engineer</h3>
                 <div class="timeline-org">Reliance Jio Platforms Ltd.</div>
                 <ul class="timeline-bullets">
                   <li>Orchestrated regression strategies for the JioPartnerWorld application (1M+ users), validating cloud-hosted microservices via Jenkins CI/CD pipelines and Jira-tracked end-to-end scenarios, reducing production defect leakage by 15%.</li>
@@ -273,8 +361,8 @@
                 <li>MongoDB</li>
               </ul>
               <div class="project-links">
-                <a class="btn btn--small btn--ghost" href="https://github.com/aryabro" target="_blank" rel="noopener">
-                  <i class="fab fa-github" aria-hidden="true"></i> View Code
+                <a class="btn btn--small btn--ghost" href="https://github.com/aryabro/InsightHub" target="_blank" rel="noopener">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i> View Code
                 </a>
               </div>
             </article>
@@ -298,15 +386,40 @@
                 <li>PyTorch</li>
               </ul>
               <div class="project-links">
-                <a class="btn btn--small btn--ghost" href="https://github.com/aryabro" target="_blank" rel="noopener">
-                  <i class="fab fa-github" aria-hidden="true"></i> View Code
+                <a class="btn btn--small btn--ghost" href="https://github.com/aryabro/GhibliDream" target="_blank" rel="noopener">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i> View Code
                 </a>
               </div>
             </article>
 
             <article class="project-card">
               <div class="project-image">
-                <img src="https://via.placeholder.com/600x400/0a0e27/ffd200?text=SWE-Agent" alt="SWE-Agent Project" class="project-thumbnail">
+                <img src="assets/projects/us-census-ai-analyst-demo1.png" alt="US Census AI Analyst Project" class="project-thumbnail">
+              </div>
+              <div class="project-kicker">Data + AI</div>
+              <h3 class="project-title">US Census AI Analyst</h3>
+              <div class="project-subtitle">Conversational data analytics agent (Text-to-SQL + guardrails) on Snowflake.</div>
+              <p class="project-description">
+                Engineered a Text-to-SQL agent for the SafeGraph US Census dataset (220k+ block groups), enabling non-technical users to query 7,000+ demographic attributes via natural language by implementing a validated semantic layer.
+                Architected a dual-LLM orchestration pipeline with Llama 3.1-8b to enforce zero-shot security guardrails (blocking prompt injections) and synthesize results into conversational insights, achieving 90%+ query accuracy and &lt;20s latency.
+              </p>
+              <ul class="project-tags" aria-label="Tech highlights">
+                <li>SQL</li>
+                <li>Python</li>
+                <li>Snowflake</li>
+                <li>Text-to-SQL</li>
+                <li>Guardrails</li>
+              </ul>
+              <div class="project-links">
+                <a class="btn btn--small btn--ghost" href="https://github.com/aryabro/USCensus-AI-Analyst" target="_blank" rel="noopener">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i> View Code
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-image">
+                <img src="assets/projects/swebench.gif" alt="SWE-Agent Project" class="project-thumbnail">
               </div>
               <div class="project-kicker">AI Agents</div>
               <h3 class="project-title">SWE-Agent</h3>
@@ -323,15 +436,15 @@
                 <li>Python</li>
               </ul>
               <div class="project-links">
-                <a class="btn btn--small btn--ghost" href="https://github.com/aryabro" target="_blank" rel="noopener">
-                  <i class="fab fa-github" aria-hidden="true"></i> View Code
+                <a class="btn btn--small btn--ghost" href="https://github.com/aryabro/SWE-Agent" target="_blank" rel="noopener">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i> View Code
                 </a>
               </div>
             </article>
           </div>
           <div class="projects-footer">
             <a class="btn btn--ghost" href="https://github.com/aryabro" target="_blank" rel="noopener">
-              <i class="fab fa-github" aria-hidden="true"></i> View all on GitHub
+              <i class="fa-brands fa-github" aria-hidden="true"></i> View all on GitHub
             </a>
           </div>
         </div>
@@ -347,71 +460,71 @@
           <div class="skills-compact">
             <div class="skill-category-inline">
               <div class="skill-icon">
-                <i class="fas fa-code" aria-hidden="true"></i>
+                <i class="fa-solid fa-code" aria-hidden="true"></i>
               </div>
               <div class="skill-content">
                 <h3>Programming</h3>
                 <div class="skill-tags">
-                  <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
-                  <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
-                  <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
-                  <span class="skill-tag"><i class="fab fa-node-js"></i> TypeScript</span>
-                  <span class="skill-tag"><i class="fas fa-terminal"></i> C++</span>
-                  <span class="skill-tag"><i class="fas fa-terminal"></i> Bash</span>
-                  <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
+                  <span class="skill-tag"><i class="fa-brands fa-python"></i> Python</span>
+                  <span class="skill-tag"><i class="fa-brands fa-java"></i> Java</span>
+                  <span class="skill-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+                  <span class="skill-tag"><i class="fa-brands fa-node-js"></i> TypeScript</span>
+                  <span class="skill-tag"><i class="fa-solid fa-terminal"></i> C++</span>
+                  <span class="skill-tag"><i class="fa-solid fa-terminal"></i> Bash</span>
+                  <span class="skill-tag"><i class="fa-solid fa-database"></i> SQL</span>
                 </div>
               </div>
             </div>
 
             <div class="skill-category-inline">
               <div class="skill-icon">
-                <i class="fas fa-server" aria-hidden="true"></i>
+                <i class="fa-solid fa-server" aria-hidden="true"></i>
               </div>
               <div class="skill-content">
                 <h3>Backend / Cloud</h3>
                 <div class="skill-tags">
-                  <span class="skill-tag"><i class="fab fa-aws"></i> AWS</span>
-                  <span class="skill-tag"><i class="fab fa-docker"></i> Docker</span>
-                  <span class="skill-tag"><i class="fas fa-dharmachakra"></i> Kubernetes</span>
-                  <span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span>
-                  <span class="skill-tag"><i class="fas fa-leaf"></i> Spring Boot</span>
-                  <span class="skill-tag"><i class="fas fa-database"></i> MongoDB</span>
-                  <span class="skill-tag"><i class="fas fa-database"></i> MySQL</span>
-                  <span class="skill-tag"><i class="fas fa-code-branch"></i> CI/CD</span>
+                  <span class="skill-tag"><i class="fa-brands fa-aws"></i> AWS</span>
+                  <span class="skill-tag"><i class="fa-brands fa-docker"></i> Docker</span>
+                  <span class="skill-tag"><i class="fa-solid fa-dharmachakra"></i> Kubernetes</span>
+                  <span class="skill-tag"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                  <span class="skill-tag"><i class="fa-solid fa-leaf"></i> Spring Boot</span>
+                  <span class="skill-tag"><i class="fa-solid fa-database"></i> MongoDB</span>
+                  <span class="skill-tag"><i class="fa-solid fa-database"></i> MySQL</span>
+                  <span class="skill-tag"><i class="fa-solid fa-code-branch"></i> CI/CD</span>
                 </div>
               </div>
             </div>
 
             <div class="skill-category-inline">
               <div class="skill-icon">
-                <i class="fas fa-brain" aria-hidden="true"></i>
+                <i class="fa-solid fa-brain" aria-hidden="true"></i>
               </div>
               <div class="skill-content">
                 <h3>AI / ML</h3>
                 <div class="skill-tags">
-                  <span class="skill-tag"><i class="fas fa-fire"></i> PyTorch</span>
-                  <span class="skill-tag"><i class="fas fa-brain"></i> TensorFlow</span>
-                  <span class="skill-tag"><i class="fas fa-link"></i> LangChain</span>
-                  <span class="skill-tag"><i class="fas fa-vector-square"></i> RAG</span>
-                  <span class="skill-tag"><i class="fas fa-search"></i> FAISS</span>
-                  <span class="skill-tag"><i class="fas fa-image"></i> Stable Diffusion</span>
-                  <span class="skill-tag"><i class="fas fa-eye"></i> OpenCV</span>
+                  <span class="skill-tag"><i class="fa-solid fa-fire"></i> PyTorch</span>
+                  <span class="skill-tag"><i class="fa-solid fa-brain"></i> TensorFlow</span>
+                  <span class="skill-tag"><i class="fa-solid fa-link"></i> LangChain</span>
+                  <span class="skill-tag"><i class="fa-solid fa-vector-square"></i> RAG</span>
+                  <span class="skill-tag"><i class="fa-solid fa-search"></i> FAISS</span>
+                  <span class="skill-tag"><i class="fa-solid fa-image"></i> Stable Diffusion</span>
+                  <span class="skill-tag"><i class="fa-solid fa-eye"></i> OpenCV</span>
                 </div>
               </div>
             </div>
 
             <div class="skill-category-inline">
               <div class="skill-icon">
-                <i class="fas fa-tools" aria-hidden="true"></i>
+                <i class="fa-solid fa-tools" aria-hidden="true"></i>
               </div>
               <div class="skill-content">
                 <h3>Automation & Testing</h3>
                 <div class="skill-tags">
-                  <span class="skill-tag"><i class="fas fa-robot"></i> Selenium</span>
-                  <span class="skill-tag"><i class="fas fa-flask"></i> Pytest</span>
-                  <span class="skill-tag"><i class="fab fa-github"></i> GitHub API</span>
-                  <span class="skill-tag"><i class="fas fa-terminal"></i> Bash</span>
-                  <span class="skill-tag"><i class="fas fa-check-circle"></i> Test Frameworks</span>
+                  <span class="skill-tag"><i class="fa-solid fa-robot"></i> Selenium</span>
+                  <span class="skill-tag"><i class="fa-solid fa-flask"></i> Pytest</span>
+                  <span class="skill-tag"><i class="fa-brands fa-github"></i> GitHub API</span>
+                  <span class="skill-tag"><i class="fa-solid fa-terminal"></i> Bash</span>
+                  <span class="skill-tag"><i class="fa-solid fa-check-circle"></i> Test Frameworks</span>
                 </div>
               </div>
             </div>
@@ -423,31 +536,24 @@
         <div class="container">
           <div class="contact-content">
             <h2 id="contact-title">Let's build something that works at scale</h2>
-            <p class="contact-intro">Want to collaborate, chat about a role, or discuss a project? Reach out to me here... </a></p>
+            <p class="contact-intro">Want to collaborate, chat about a role, or discuss a project? Reach out to me here.</p>
             
             <div class="contact-card-unified" aria-label="Contact information">
               <div class="contact-info-grid">
                 <div class="contact-info-item">
-                  <i class="fas fa-envelope" aria-hidden="true"></i>
+                  <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                   <div>
                     <h3>Email</h3>
                     <div class="contact-inline">
-                      <a href="mailto:nasare2@illinois.edu">nasare2@illinois.edu</a>
-                      <button
-                        class="contact-copy-btn contact-copy-btn--inline"
-                        type="button"
-                        data-copy="nasare2@illinois.edu"
-                        aria-label="Copy email"
-                        title="Copy email"
-                      >
-                        <i class="fas fa-copy" aria-hidden="true"></i>
+                      <button class="contact-email-copy" type="button" data-copy-email="nasare2@illinois.edu" aria-label="Copy email to clipboard" title="Click to copy">
+                        nasare2@illinois.edu
                       </button>
                     </div>
                   </div>
                 </div>
                 
                 <div class="contact-info-item">
-                  <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                  <i class="fa-solid fa-map-marker-alt" aria-hidden="true"></i>
                   <div>
                     <h3>Location</h3>
                     <p>United States</p>
@@ -455,7 +561,7 @@
                 </div>
                 
                 <div class="contact-info-item">
-                  <i class="fab fa-linkedin" aria-hidden="true"></i>
+                  <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                   <div>
                     <h3>LinkedIn</h3>
                     <a href="https://www.linkedin.com/in/aryaman-nasare/" target="_blank" rel="noopener">aryaman-nasare</a>
@@ -463,19 +569,32 @@
                 </div>
                 
                 <div class="contact-info-item">
-                  <i class="fab fa-github" aria-hidden="true"></i>
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
                   <div>
                     <h3>GitHub</h3>
                     <a href="https://github.com/aryabro" target="_blank" rel="noopener">aryabro</a>
                   </div>
                 </div>
               </div>
-              
-              <p class="contact-copy-status" aria-live="polite"></p>
             </div>
           </div>
         </div>
       </section>
     </main>
+    
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <div class="modal" id="edu-modal" aria-hidden="true">
+      <div class="modal-overlay" data-modal-close></div>
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="edu-modal-title">
+        <div class="modal-header">
+          <h3 class="modal-title" id="edu-modal-title"></h3>
+          <button class="modal-close" type="button" data-modal-close aria-label="Close dialog">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="modal-body" id="edu-modal-body"></div>
+      </div>
+    </div>
   <script defer src="bundle.js"></script></body>
 </html>
